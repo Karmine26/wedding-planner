@@ -169,7 +169,7 @@ const MODULES = {
     ],
   },
   welcome: {
-    table:'timeline_events', icon:'🥂', title:'Welcome Party', sub:'Thursday, July 8, 2027 · venue TBD',
+    table:'timeline_events', icon:'🌿', title:'Henna & Welcome Party', sub:'Thursday, July 8, 2027 (two nights before the wedding) · venue TBD',
     primary:'title', filter:r=>r.event_day==='welcome',
     sort:(a,b)=>(a.time||'').localeCompare(b.time||''),
     meta:r=>[r.time, r.location, r.responsible].filter(Boolean).join(' · '),
@@ -245,7 +245,7 @@ const NAV = [
   ['seating','🪑','Seating'],
   ['vendors','🏷️','Vendors'],
   ['timeline','🕐','Day-of'],
-  ['welcome','🥂','Welcome'],
+  ['welcome','🌿','Henna'],
   ['registry','🎁','Registry'],
   ['inspiration','✨','Inspiration'],
   ['documents','📄','Documents'],
@@ -342,6 +342,8 @@ async function renderDashboard(){
       el('div',{class:'label'},'Counting down to'),
       el('div',{class:'big'}, dleft>0?`${dleft} days`:(dleft===0?'Today! 🎉':'Married 💍')),
       el('div',{class:'sub'}, `${fmtDate(s.wedding_date||WEDDING)} · ${s.venue||''}`),
+      s.welcome_date ? el('a',{class:'sub hero-2nd', href:'#welcome'},
+        `🌿 Henna & Welcome Party · ${fmtDate(s.welcome_date)}`) : null,
     ]),
     el('div',{class:'grid cards'},[
       statCard('Tasks done', `${doneT}`, `of ${tasks.length}`, tasks.length?doneT/tasks.length:0),

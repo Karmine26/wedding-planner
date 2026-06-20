@@ -7,7 +7,7 @@
      • Supabase API / realtime: never intercepted — always live network.
    Bump CACHE when you change app files to force an update.
    ============================================================ */
-const CACHE = 'wed-v6';
+const CACHE = 'wed-v7';
 const SHELL = [
   './', './index.html', './styles.css', './app.js',
   './config.js', './seed.js', './manifest.json', './icon.png',
