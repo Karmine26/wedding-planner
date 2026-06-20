@@ -1,0 +1,11 @@
+{
+  "name": "Amin & Co — Wedding Planner",
+  "short_name": "Our Wedding",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#faf7f2",
+  "theme_color": "#8a6d3b",
+  "icons": [
+    { "src": "icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,6 @@
+# Dev/test leftovers — keep them out of the published site
+smoke.mjs
+smoke2.cjs
+package.json
+package-lock.json
+node_modules/
